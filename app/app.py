@@ -39,6 +39,7 @@ st.markdown("""
     footer { visibility: hidden; }
     #MainMenu { visibility: hidden; }
     [data-testid="stDecoration"] { display: none; }
+    .block-container { padding-top: 2rem !important; padding-bottom: 3rem !important; }
 </style>
 """, unsafe_allow_html=True)
 
