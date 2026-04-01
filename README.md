@@ -5,6 +5,7 @@ A machine learning web app that classifies waste into 12 categories and provides
 🌐 **Live Demo:** [smart-waste-classifier-26.streamlit.app](https://smart-waste-classifier-26.streamlit.app)
 
 A lot of waste ends up in the wrong bin simply because people don't know where it goes. Upload a photo of any waste item and the model tells you its category, the correct bin, and how to prepare it for disposal. Trained on 12 waste categories using MobileNetV2 with transfer learning, achieving 90.42% validation accuracy.
+
 ---
 
 ## 📸 Screenshots
