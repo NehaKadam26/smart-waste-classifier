@@ -1,12 +1,10 @@
 # ♻️ Smart Waste Classifier
 
-> AI-powered waste classification using deep learning — upload an image, get instant disposal guidance.
+A machine learning web app that classifies waste into 12 categories and provides disposal instructions. Built using transfer learning on MobileNetV2 and deployed with Streamlit.
 
 🌐 **Live Demo:** [smart-waste-classifier-26.streamlit.app](https://smart-waste-classifier-26.streamlit.app)
 
-Smart Waste Classifier is a computer vision web app that identifies 12 categories of household and industrial waste from a single image. Built on MobileNetV2 with transfer learning, it achieves **90.42% validation accuracy** and provides actionable disposal instructions for each category — helping users make the right recycling and waste decisions effortlessly.
-
-The app is designed to be simple: upload a photo, and within seconds you get the waste category, the correct bin, preparation tips, and a confidence score.
+Waste management is a growing problem and a lot of it comes down to people not knowing which bin to use. This project tries to solve that with a simple image classification app — upload a photo of any waste item and the model tells you what category it belongs to, which bin it goes in, and how to prepare it for disposal. The model was trained on a dataset of 12 waste categories using MobileNetV2 as a base with transfer learning, achieving 90.42% validation accuracy.
 
 ---
 
@@ -43,7 +41,7 @@ The app is designed to be simple: upload a photo, and within seconds you get the
 | Epochs | 10 |
 | Input Size | 224 × 224 px |
 
-The model uses MobileNetV2 pretrained on ImageNet as a frozen feature extractor, with a custom classification head trained on the waste dataset. Class weights were applied during training to handle dataset imbalance across categories.
+The base MobileNetV2 model was pretrained on ImageNet and used as a frozen feature extractor. A custom classification head was added on top and trained on the waste dataset. Class weights were used during training to handle the imbalance across categories.
 
 ---
 
@@ -112,5 +110,4 @@ smart-waste-classifier/
 | Web App | Streamlit |
 | Image Processing | Pillow, NumPy |
 | Language | Python 3.11 |
-
 
