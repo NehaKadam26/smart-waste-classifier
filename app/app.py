@@ -205,7 +205,7 @@ if uploaded_file:
         col_a, col_b = st.columns(2)
         with col_a:
             st.markdown(f"""
-            <div style='background:#f5f0e8; border-radius:18px; padding:1.2rem;'>
+            <div style='background:#f5f0e8; border-radius:18px; padding:1.2rem; margin-bottom:1rem;'>
                 <div style='font-size:1.5rem; margin-bottom:0.4rem;'>🗂️</div>
                 <div style='font-size:0.65rem; color:#888; text-transform:uppercase; letter-spacing:0.1em; font-weight:700;'>Target Bin</div>
                 <div style='font-size:1rem; font-weight:800; color:#2D6A4F; margin-top:0.3rem;'>{info["bin_value"]}</div>
