@@ -132,7 +132,10 @@ Aggregate accuracy hides class-level weaknesses, especially given the dataset's 
 | trash | 0.98 | 0.92 | 0.95 | 140 |
 | shoes | 0.94 | 0.97 | 0.95 | 160 |
 | clothes | 0.96 | 0.97 | 0.97 | 160 |
+
+
 **Confusion matrix:**
+
 ![Confusion Matrix](results/confusion_matrix.png)
 
 **Notable findings:**
