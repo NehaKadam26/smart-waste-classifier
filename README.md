@@ -2,9 +2,9 @@
 
 A machine learning web app that classifies waste into 12 categories and provides disposal instructions. Built using transfer learning on MobileNetV2 and deployed with Streamlit.
 
-🌐 **Live Demo:** [smart-waste-classifier-26.streamlit.app](https://smart-waste-classifier-26.streamlit.app)
+**Live Demo:** [smart-waste-classifier-26.streamlit.app](https://smart-waste-classifier-26.streamlit.app)
 
-A lot of waste ends up in the wrong bin simply because people don't know where it goes. Upload a photo of any waste item and the model tells you its category, the correct bin, and how to prepare it for disposal. Trained on 12 waste categories using MobileNetV2 with transfer learning, achieving 90.42% validation accuracy.
+Upload a photo of any waste item and the model tells you its category, the correct bin, and how to prepare it for disposal. Trained on 12 waste categories using MobileNetV2 with transfer learning, achieving 90.42% validation accuracy.
 
 ---
 
@@ -42,25 +42,6 @@ A lot of waste ends up in the wrong bin simply because people don't know where i
 | Input Size | 224 × 224 px |
 
 The base MobileNetV2 model was pretrained on ImageNet and used as a frozen feature extractor. A custom classification head was added on top and trained on the waste dataset. Class weights were used during training to handle the imbalance across categories.
-
----
-
-## 🗂️ Waste Categories
-
-| Category | Disposal |
-|---|---|
-| 🔋 Battery | Hazardous Waste Drop-off |
-| 🌿 Biological | Compost / Organic Bin |
-| 🍺 Brown Glass | Glass Recycling |
-| 📦 Cardboard | Paper & Cardboard Bin |
-| 👕 Clothes | Textile Recycling |
-| 🍾 Green Glass | Glass Recycling |
-| 🥫 Metal | Metal Recycling |
-| 📄 Paper | Paper & Cardboard Bin |
-| 🧴 Plastic | Plastic Recycling |
-| 👟 Shoes | Textile / Shoe Recycling |
-| 🗑️ Trash | General Waste |
-| 🥛 White Glass | Glass Recycling |
 
 ---
 
