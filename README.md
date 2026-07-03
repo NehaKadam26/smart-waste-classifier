@@ -111,3 +111,33 @@ smart-waste-classifier/
 | Image Processing | Pillow, NumPy |
 | Language | Python 3.11 |
 
+
+---
+
+## 📊 Per-Class Performance
+
+Aggregate accuracy hides class-level weaknesses, especially given the dataset's class imbalance. Full per-class breakdown from validation set evaluation:
+
+| Category | Precision | Recall | F1 | Support |
+|---|---|---|---|---|
+| plastic | 0.93 | 0.62 | 0.75 | 160 |
+| metal | 0.64 | 0.93 | 0.76 | 154 |
+| white-glass | 0.90 | 0.69 | 0.78 | 155 |
+| green-glass | 0.90 | 0.81 | 0.85 | 126 |
+| brown-glass | 0.83 | 0.97 | 0.89 | 122 |
+| paper | 0.92 | 0.88 | 0.90 | 160 |
+| cardboard | 0.91 | 0.89 | 0.90 | 160 |
+| battery | 0.92 | 0.96 | 0.94 | 160 |
+| biological | 0.90 | 0.99 | 0.94 | 160 |
+| trash | 0.98 | 0.92 | 0.95 | 140 |
+| shoes | 0.94 | 0.97 | 0.95 | 160 |
+| clothes | 0.96 | 0.97 | 0.97 | 160 |
+**Confusion matrix:**
+![Confusion Matrix](results/confusion_matrix.png)
+
+**Notable findings:**
+- **Plastic** has high precision (0.93) but low recall (0.63) — the model is conservative about labeling plastic, missing ~37% of true plastic items.
+- **Metal** shows the opposite pattern (precision 0.64, recall 0.93) — over-predicted, catching most real metal but also mislabeling other items as metal.
+- **White-glass** recall (0.69) suggests confusion with other glass colors (brown/green-glass), a plausible failure mode for a CNN given how visually similar glass tones are.
+
+These per-class gaps, not visible from the 90% aggregate accuracy alone, are natural next targets for further data augmentation or class-specific fine-tuning.
