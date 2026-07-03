@@ -66,16 +66,18 @@ The app will open automatically at `http://localhost:8501`.
 smart-waste-classifier/
 ├── app/
 │   └── app.py                  # Streamlit web app
-├── data/
-│   ├── train/                  # Training images (12 classes)
-│   └── val/                    # Validation images
 ├── model/
 │   ├── model.h5                # Trained MobileNetV2 model
 │   └── class_indices.json      # Class name → index mapping
 ├── notebooks/
 │   ├── 01_setup_and_data.ipynb # Data preparation & splitting
 │   └── 02_train_model.ipynb    # Model training & evaluation
-├── screenshots/                # App screenshots
+├── results/                    # Evaluation outputs
+│   ├── classification_report.csv
+│   ├── confusion_matrix.png
+│   └── per_class_summary.md
+├── screenshots/                # App screenshots (6 images)
+├── eval_per_class.py           # Per-class evaluation script
 ├── requirements.txt
 └── README.md
 ```
